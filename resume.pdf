@@ -1,0 +1,148 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources 4 0 R /Contents 5 0 R >>
+endobj
+
+4 0 obj
+<< /Font << /F1 6 0 R /F2 7 0 R >> >>
+endobj
+
+5 0 obj
+<< /Length 2500 >>
+stream
+BT
+/F1 18 Tf
+50 750 Td
+(DIVYANSHI SHEKHAWAT) Tj
+0 -25 Td
+/F2 12 Tf
+(Engineering Student | Aspiring Developer) Tj
+0 -15 Td
+(Email: sdivyanshi573@gmail.com) Tj
+0 -12 Td
+(LinkedIn: www.linkedin.com/in/divyanshi-shekhawat-848b67249) Tj
+0 -12 Td
+(GitHub: https://github.com/div-716) Tj
+
+0 -40 Td
+/F1 14 Tf
+(EDUCATION) Tj
+0 -20 Td
+/F2 12 Tf
+(Bachelor of Technology in Computer Science Engineering) Tj
+0 -15 Td
+(Expected Graduation: 2025) Tj
+0 -12 Td
+(• Relevant Coursework: Data Structures, Algorithms, Database Systems) Tj
+0 -12 Td
+(• Current GPA: 3.8/4.0) Tj
+
+0 -30 Td
+/F1 14 Tf
+(TECHNICAL SKILLS) Tj
+0 -20 Td
+/F2 12 Tf
+(Programming Languages:) Tj
+0 -12 Td
+(• Python, Java, C++, JavaScript) Tj
+0 -15 Td
+(Web Technologies:) Tj
+0 -12 Td
+(• HTML5, CSS3, React, Node.js, Flask) Tj
+0 -15 Td
+(Tools & Technologies:) Tj
+0 -12 Td
+(• Git/GitHub, MySQL, Data Structures & Algorithms) Tj
+
+0 -30 Td
+/F1 14 Tf
+(PROJECTS) Tj
+0 -20 Td
+/F2 12 Tf
+(Student Management System) Tj
+0 -12 Td
+(• Built with Python Flask and MySQL) Tj
+0 -12 Td
+(• Features: Student registration, grade tracking, report generation) Tj
+0 -15 Td
+(Personal Task Tracker) Tj
+0 -12 Td
+(• Responsive web application using JavaScript and local storage) Tj
+0 -12 Td
+(• Task organization with priority levels and completion tracking) Tj
+0 -15 Td
+(Scientific Calculator) Tj
+0 -12 Td
+(• Java Swing application with scientific functions) Tj
+0 -12 Td
+(• Clean user interface with comprehensive mathematical operations) Tj
+
+0 -30 Td
+/F1 14 Tf
+(ACHIEVEMENTS) Tj
+0 -20 Td
+/F2 12 Tf
+(• Dean's List Recognition (2024) - Academic Excellence) Tj
+0 -12 Td
+(• First Place - Inter-college Programming Competition (2023)) Tj
+0 -12 Td
+(• Technical Paper Presentation - National Symposium (2023)) Tj
+0 -12 Td
+(• Merit-based Scholarship Recipient (2022)) Tj
+
+0 -30 Td
+/F1 14 Tf
+(EXTRACURRICULAR ACTIVITIES) Tj
+0 -20 Td
+/F2 12 Tf
+(• Active member of Computer Science Society) Tj
+0 -12 Td
+(• Volunteer at coding workshops for junior students) Tj
+0 -12 Td
+(• Regular contributor to open-source projects) Tj
+
+0 -30 Td
+/F1 14 Tf
+(INTERESTS) Tj
+0 -20 Td
+/F2 12 Tf
+(• Machine Learning and Artificial Intelligence) Tj
+0 -12 Td
+(• Web Development and User Experience Design) Tj
+0 -12 Td
+(• Competitive Programming and Problem Solving) Tj
+ET
+endstream
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000219 00000 n 
+0000000267 00000 n 
+0000002819 00000 n 
+0000002881 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2937
+%%EOF

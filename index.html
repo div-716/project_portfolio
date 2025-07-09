@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyanshi Shekhawat - Engineering Student</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Canvas for star trail effect -->
+    <canvas id="starCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Divyanshi Shekhawat</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#achievements" class="nav-link">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">
+                Hi, I'm <span class="highlight">Divyanshi Shekhawat</span>
+            </h1>
+            <p class="hero-subtitle">Engineering Student & Aspiring Developer</p>
+            <p class="hero-description">
+                Passionate about technology, innovation, and creating solutions that make a difference. 
+                Currently pursuing my engineering degree while exploring the fascinating world of software development.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-container">
+                <img src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Divyanshi Shekhawat">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Me</h2>
+                <p>Get to know more about my journey and aspirations</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Hello! I'm Divyanshi Shekhawat</h3>
+                    <p>
+                        I'm an engineering student with a deep passion for technology and innovation. 
+                        My journey in engineering has opened my eyes to the endless possibilities of 
+                        creating solutions that can impact lives positively.
+                    </p>
+                    <p>
+                        Currently, I'm focused on developing my skills in software development, 
+                        exploring various programming languages, and working on projects that 
+                        challenge me to think creatively and solve complex problems.
+                    </p>
+                    <p>
+                        When I'm not coding or studying, you can find me exploring new technologies, 
+                        reading tech blogs, or working on personal projects that fuel my curiosity 
+                        and help me grow as a developer.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>15+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>2+</h4>
+                            <p>Years Learning</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>5+</h4>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Engineering Student">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Skills & Technologies</h2>
+                <p>The tools and technologies I'm learning and working with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-item">
+                        <span>Python</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Java</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>C++</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Web Technologies</h3>
+                    <div class="skill-item">
+                        <span>HTML/CSS</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>React</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Node.js</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Flask</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-item">
+                        <span>Git/GitHub</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>MySQL</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Data Structures</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Problem Solving</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Projects</h2>
+                <p>Some of my recent work and learning projects</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Student Management System">
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Management System</h3>
+                        <p>A comprehensive web application for managing student records, built with Python Flask and MySQL. Features include student registration, grade tracking, and report generation.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>MySQL</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/div-716" class="btn btn-primary" target="_blank">GitHub</a>
+                            <a href="#" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Task Tracker App">
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Task Tracker</h3>
+                        <p>A responsive task management application built with JavaScript and local storage. Helps users organize their daily tasks with priority levels and completion tracking.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Local Storage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/div-716" class="btn btn-primary" target="_blank">GitHub</a>
+                            <a href="#" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Calculator App">
+                    </div>
+                    <div class="project-content">
+                        <h3>Scientific Calculator</h3>
+                        <p>A feature-rich calculator application built with Java Swing. Includes basic arithmetic operations, scientific functions, and a clean user interface.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Swing</span>
+                            <span>OOP</span>
+                            <span>GUI Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/div-716" class="btn btn-primary" target="_blank">GitHub</a>
+                            <a href="#" class="btn btn-secondary">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Achievements</h2>
+                <p>Milestones and recognition in my academic journey</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Dean's List Recognition</h3>
+                        <p>Achieved academic excellence with a GPA above 3.8, earning recognition on the Dean's List for outstanding performance in engineering coursework.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Coding Competition Winner</h3>
+                        <p>Secured first place in the inter-college programming competition, solving complex algorithmic problems under time constraints.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Technical Paper Presentation</h3>
+                        <p>Presented research paper on "Machine Learning Applications in Engineering" at the national technical symposium.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Merit Scholarship</h3>
+                        <p>Awarded merit-based scholarship for academic excellence and consistent performance throughout the academic year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Latest Blog Posts</h2>
+                <p>Thoughts, insights, and learning experiences from my journey</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Python Programming">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Dec 15, 2024</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>Getting Started with Python: A Beginner's Journey</h3>
+                        <p>My experience learning Python as my first programming language and how it opened doors to endless possibilities in software development...</p>
+                        <a href="#" class="read-more" onclick="openBlogModal('python-journey')">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Engineering Student Life">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Nov 28, 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3>Balancing Engineering Studies and Coding Projects</h3>
+                        <p>Tips and strategies I've learned for managing academic coursework while pursuing personal coding projects and skill development...</p>
+                        <a href="#" class="read-more" onclick="openBlogModal('balancing-studies')">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Web Development">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Nov 10, 2024</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3>My First Web Development Project: Lessons Learned</h3>
+                        <p>Reflecting on the challenges and victories of building my first web application, from concept to deployment...</p>
+                        <a href="#" class="read-more" onclick="openBlogModal('first-web-project')">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/3861458/pexels-photo-3861458.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Data Structures">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Oct 25, 2024</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3>Understanding Data Structures: A Student's Perspective</h3>
+                        <p>Breaking down complex data structures concepts and sharing practical examples that helped me grasp these fundamental programming concepts...</p>
+                        <a href="#" class="read-more" onclick="openBlogModal('data-structures')">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400" alt="GitHub">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Oct 12, 2024</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3>Version Control with Git: Essential Skills for Students</h3>
+                        <p>Why every engineering student should learn Git and GitHub, and how version control has transformed my project workflow...</p>
+                        <a href="#" class="read-more" onclick="openBlogModal('git-version-control')">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Get In Touch</h2>
+                <p>Let's connect and discuss opportunities or just have a chat about technology</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always excited to connect with fellow students, professionals, and anyone interested in technology and engineering.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>sdivyanshi573@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>www.linkedin.com/in/divyanshi-shekhawat-848b67249</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🐙</div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>https://github.com/div-716</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Divyanshi Shekhawat</h3>
+                    <p>Engineering Student passionate about technology and innovation.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="www.linkedin.com/in/divyanshi-shekhawat-848b67249" target="_blank" aria-label="LinkedIn">💼</a>
+                        <a href="https://github.com/div-716" target="_blank" aria-label="GitHub">🐙</a>
+                        <a href="mailto:sdivyanshi573@gmail.com" aria-label="Email">📧</a>
+                        <a href="#home" aria-label="Back to top">⬆️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Divyanshi Shekhawat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBlogModal()">&times;</span>
+            <div id="blogModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="stars.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
