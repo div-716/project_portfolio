@@ -18,12 +18,51 @@
     --transition: all 0.3s ease;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+/* Light/Dark Mode Theme */
+[data-theme='dark'] {
+    --primary-color: #ffb3b3;
+    --secondary-color: #efd8d8;
+    --accent-color: #1d1d48;
+    --dark-color: #efd8d8;
+    --darker-color: #fff;
+    --white: #1d1d1d;
+    --gray-light: #232336;
+    --gray-medium: #bdbdbd;
+    --shadow: 0 4px 20px rgba(0,0,0,0.25);
+    --shadow-hover: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+body, html {
+    background: var(--white);
     color: var(--darker-color);
-    background-color: var(--white);
-    overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
+}
+
+[data-theme='dark'] body, [data-theme='dark'] html {
+    background: var(--dark-color);
+    color: var(--white);
+}
+
+#theme-toggle {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background 0.3s;
+    z-index: 1001;
+}
+
+#theme-toggle:hover {
+    background: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* Canvas for star effect */
@@ -140,11 +179,12 @@ body {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Hero Section */
+/* Enhanced Hero Section Styles */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 20px;
     background: linear-gradient(135deg, var(--accent-color) 0%, var(--white) 100%);
     max-width: 1200px;
@@ -153,46 +193,51 @@ body {
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    font-weight: 800;
     color: var(--darker-color);
-}
-
-.highlight {
-    color: var(--primary-color);
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
     margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(153,0,0,0.07);
+    transition: color 0.3s;
+}
+
+.hero-title span {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.hero-welcome {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
     font-weight: 500;
-}
-
-.hero-description {
-    font-size: 1.1rem;
-    color: var(--gray-medium);
     margin-bottom: 2rem;
-    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 1px 4px rgba(153,0,0,0.05);
+    animation: fadeInUp 1.2s;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-image {
-    flex: 1;
+    flex: 0 0 350px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
 }
 
 .image-container {
@@ -200,20 +245,21 @@ body {
     height: 350px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 8px 30px rgba(153,0,0,0.12);
     border: 5px solid var(--accent-color);
-    transition: var(--transition);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .image-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 40px rgba(153, 0, 0, 0.2);
+    transform: scale(1.04);
+    box-shadow: 0 16px 40px rgba(153,0,0,0.18);
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 /* Buttons */
@@ -1078,13 +1124,18 @@ body {
         font-size: 2.5rem;
     }
     
+    .hero-title .highlight {
+        font-size: 2.2rem;
+        padding: 0 0.3em;
+    }
+    
     .hero-buttons {
         justify-content: center;
     }
     
     .image-container {
-        width: 280px;
-        height: 280px;
+        width: 220px;
+        height: 220px;
     }
     
     .about-content {
@@ -1132,6 +1183,11 @@ body {
         font-size: 2rem;
     }
     
+    .hero-title .highlight {
+        font-size: 1.3rem;
+        padding: 0 0.2em;
+    }
+    
     .section-header h2 {
         font-size: 2rem;
     }
@@ -1149,12 +1205,48 @@ body {
     }
     
     .image-container {
-        width: 250px;
-        height: 250px;
+        width: 140px;
+        height: 140px;
     }
     
     .contact-form {
         padding: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-title span {
+        font-size: 2.5rem;
+    }
+    .image-container, .hero-image {
+        width: 220px;
+        height: 220px;
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 1.3rem;
+    }
+    .hero-title span {
+        font-size: 1.7rem;
+    }
+    .image-container, .hero-image {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+    }
+    .hero-welcome {
+        font-size: 1rem;
     }
 }
 
@@ -1218,4 +1310,45 @@ html {
 
 .btn-primary:hover {
     animation: pulse 1.5s infinite;
+}
+
+/* Subtle Hero Background */
+.hero.subtle-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--white) 100%);
+}
+
+.hero-bg-svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+[data-theme='dark'] .hero.subtle-bg {
+    background: linear-gradient(135deg, #1d1d48 0%, #232336 100%);
+}
+
+[data-theme='dark'] .hero-bg-svg ellipse {
+    fill: #990000 !important;
+    fill-opacity: 0.13 !important;
+}
+[data-theme='dark'] .hero-bg-svg circle {
+    fill: #efd8d8 !important;
+    fill-opacity: 0.09 !important;
+}
+
+/* Ensure hero content is above background SVG */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+[data-theme='dark'] .hero-title {
+    color: var(--darker-color) !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
