@@ -640,8 +640,8 @@ body, html {
     gap: 1rem;
 }
 
-/* Achievements Section */
-.achievements {
+/* Experience Section */
+.experience {
     padding: 100px 0;
 }
 
@@ -1389,3 +1389,98 @@ html {
     color: var(--white);
     transform: translateY(-2px);
 }
+
+
+/* Experience Section Styles */
+.experience {
+    padding: 100px 0;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.experience-skills span {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.experience-skills span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(153, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .experience-skills {
+        justify-content: center;
+    }
+    
+    .experience-skills span {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+}
+
+/* Experience Section Styles */
+.experience {
+    padding: 100px 0;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.experience-skills span {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.experience-skills span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(153, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .experience-skills {
+        justify-content: center;
+    }
+    
+    .experience-skills span {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+}
+
+/* Experience Section Styles */
