@@ -83,18 +83,16 @@ if (skillsSection) {
     progressObserver.observe(skillsSection);
 }
 
+// Initialize EmailJS
+(function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+})();
+
 // Contact form submission
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            message: formData.get('message')
-        };
         
         // Show loading state
         const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -102,29 +100,122 @@ if (contactForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Method 1: Try FormSubmit (simple and reliable)
         try {
-            const response = await fetch('/contact', {
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('message', message);
+            formData.append('_subject', 'New Portfolio Contact Message');
+            formData.append('_captcha', 'false');
+            formData.append('_template', 'table');
+            
+            const response = await fetch('https://formsubmit.co/sdivyanshi573@gmail.com', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
+                body: formData
             });
             
             if (response.ok) {
-                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                showSuccessMessage();
                 contactForm.reset();
+                return;
             } else {
-                showNotification('Error sending message. Please try again or contact me directly.', 'error');
+                throw new Error('FormSubmit failed');
             }
         } catch (error) {
-            console.error('Error:', error);
-            showNotification('Error sending message. Please try again or contact me directly.', 'error');
-        } finally {
-            // Reset button state
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
+            console.log('FormSubmit failed, trying alternative methods...', error);
         }
+        
+        // Method 2: Try EmailJS as backup
+        try {
+            await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: 'sdivyanshi573@gmail.com'
+            });
+            
+            showSuccessMessage();
+            contactForm.reset();
+            return;
+        } catch (error) {
+            console.log('EmailJS failed, showing manual options...', error);
+        }
+        
+        // Method 3: Show manual contact options
+        showManualContactOptions(name, email, message);
+        
+        // Reset button state
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
+}
+
+function showSuccessMessage() {
+    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+    
+    const statusDiv = document.getElementById('form-status');
+    if (statusDiv) {
+        statusDiv.style.display = 'block';
+        statusDiv.style.backgroundColor = '#d4edda';
+        statusDiv.style.color = '#155724';
+        statusDiv.style.border = '1px solid #c3e6cb';
+        statusDiv.innerHTML = '✅ Thank you! Your message has been sent successfully. I\'ll get back to you soon.';
+    }
+}
+
+function showManualContactOptions(name, email, message) {
+    showNotification('Let\'s connect directly! Use the options below to reach out.', 'info');
+    
+    const encodedMessage = encodeURIComponent(`Hi Divyanshi,\n\n${message}\n\nBest regards,\n${name}\n${email}`);
+    
+    const statusDiv = document.getElementById('form-status');
+    if (statusDiv) {
+        statusDiv.style.display = 'block';
+        statusDiv.style.backgroundColor = '#e7f3ff';
+        statusDiv.style.color = '#004085';
+        statusDiv.style.border = '1px solid #b3d7ff';
+        statusDiv.innerHTML = `
+            <p><strong>Let's connect directly! Choose your preferred method:</strong></p>
+            <div style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px;">
+                <a href="mailto:sdivyanshi573@gmail.com?subject=Portfolio Contact from ${name}&body=${encodedMessage}" 
+                   class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 5px;">
+                   📧 Send Email
+                </a>
+                <a href="https://www.linkedin.com/in/sdivyanshi573" target="_blank"
+                   class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 5px; background: #0077b5;">
+                   💼 LinkedIn Message
+                </a>
+                <button onclick="copyEmail()" class="btn btn-secondary" style="background: #6c757d; display: inline-flex; align-items: center; gap: 5px;">
+                   📋 Copy Email
+                </button>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                <strong>Your message:</strong> "${message}"
+            </p>
+        `;
+    }
+}
+
+// Function to copy email to clipboard
+function copyEmail() {
+    const email = 'sdivyanshi573@gmail.com';
+    navigator.clipboard.writeText(email).then(() => {
+        showNotification('Email address copied to clipboard!', 'success');
+    }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = email;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showNotification('Email address copied to clipboard!', 'success');
     });
 }
 
